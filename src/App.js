@@ -1,5 +1,6 @@
 import React, { setState, Component } from 'react';
 import './App.css';
+import List from './List';
 
 export default class App extends Component{
 
@@ -10,6 +11,7 @@ export default class App extends Component{
       city: '',
       error: null,
       isLoaded: false,
+      items: []
     }
   }
 
@@ -23,6 +25,9 @@ export default class App extends Component{
     .then(res => res.json())
     .then(
       (result) => {
+        const items = this.state.items;
+        items.push(result);
+        this.setState({items: items})
         this.setState({temp: result.main.temp});
         this.setState({city: input.value});
       },
@@ -34,7 +39,7 @@ export default class App extends Component{
   }
 
   render() {
-    const { temp, city, isLoaded, error } = this.state;
+    const { temp, city, isLoaded, error, items } = this.state;
     if(error){
       return(<div>Error: {error.message}</div>)
     } else{
@@ -50,10 +55,8 @@ export default class App extends Component{
             <input type='submit' name='Submit' className='submit-button' onClick={this.callApi} />
           </div>
         </div>
-        <div>
-          Temperature for {city} is {temp} degree Celcius.
-        </div>
-      </div>      
+      </div>
+      <List items={items}/>    
     </div>
   );}
 }
