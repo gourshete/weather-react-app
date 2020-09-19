@@ -40,14 +40,15 @@ export default class App extends Component{
     } else{
   return (
     <div className="App">
-      <div className="Temperature">
-        Temperature
-        <div>
+      <div className="temperature">
+        <label className='header'>Temperature</label>
+        <div className='input'>
           <label>
-            Name:
-            <input className='city' type='text' name='name' />
+            <input className='city' type='text' name='name' placeholder='Enter city name here' />
           </label>
-          <input type='submit' name='Submit' onClick={this.callApi} />
+          <div className='submit'>
+            <input type='submit' name='Submit' className='submit-button' onClick={this.callApi} />
+          </div>
         </div>
         <div>
           Temperature for {city} is {temp} degree Celcius.

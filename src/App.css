@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: mediumpurple;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+.header {
+  margin: 20px 20px;
+}
+
+.input {
+  padding: 20px 20px;
+}
+
+.city {
+  border-bottom: 1px solid;
+}
+
+.city::placeholder {
+  color: currentColor; 
+}
+
+.submit {
+  padding: 10px 20px;
+}
+
+.submit-button {
+  color: white;
+  background-color: coral;
+  border-radius: 1ch;
+  width: 80px;
+  height: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
