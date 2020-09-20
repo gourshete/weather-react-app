@@ -13,7 +13,6 @@ export default class App extends Component{
   }
 
   callApi = ()=> {
-    console.log('AAAAAAAAA');
     const apiKey = '4d8fb5b93d4af21d66a2948710284366';
     const input = document.querySelector(".city");
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apiKey}&units=metric`;
@@ -42,7 +41,7 @@ export default class App extends Component{
   return (
     <div className="App">
       <div className="temperature">
-        <label className='header'>Temperature</label>
+        <label className='header'>Find out Weathers...</label>
         <div className='input'>
           <label>
             <input className='city' type='text' name='name' placeholder='Enter city name here' />

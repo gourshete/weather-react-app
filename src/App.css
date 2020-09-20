@@ -48,6 +48,10 @@ input {
   color: inherit;
 }
 
+.temperature {
+  margin-top: 35px;
+}
+
 .header {
   margin: 20px 20px;
 }
