@@ -13,4 +13,4 @@ input {
   outline: none
 }
 
-![alt text][./public/react-weather-app.png]
+![alt text][react-weather-app.png]
