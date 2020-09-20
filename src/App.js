@@ -1,4 +1,4 @@
-import React, { setState, Component } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import List from './List';
 
@@ -20,14 +20,13 @@ export default class App extends Component{
     .then(res => res.json())
     .then(
       (result) => {
-        if(result.cod != 404){
+        if(result.cod !== 404){
           const items = this.state.items;
           items.push(result);
           this.setState({items: items})
         }
       },
       (error) => {
-        debugger
         this.setState({error: error});
       }
     );

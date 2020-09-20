@@ -1,11 +1,7 @@
-import React, { setState, Component } from 'react';
+import React, { Component } from 'react';
 import './List.css'
 
 export default class List extends Component{
-
-  constructor(props){
-    super(props);
-  }
 
   render() {
       const items = this.props.items;
