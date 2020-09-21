@@ -20,9 +20,15 @@ export default class App extends Component{
     .then(res => res.json())
     .then(
       (result) => {
-        if(result.cod !== 404){
+        if(result.cod !== '404'){
           const items = this.state.items;
-          items.push(result);
+          if(items.length<5){
+            items.splice(0, 0, result);
+          }
+          else{
+            items.pop();
+            items.splice(0, 0, result)
+          }
           this.setState({items: items})
         }
       },

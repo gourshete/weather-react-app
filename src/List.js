@@ -20,7 +20,7 @@ export default class List extends Component{
             </div>
             <div className='weather'>
               <label>
-                weather - {item.weather[0].description}
+              {item.weather[0].main} - {item.weather[0].description}
               </label>
             </div>
         </div>
