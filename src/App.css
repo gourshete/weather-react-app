@@ -49,7 +49,7 @@ input {
 }
 
 .temperature {
-  margin-top: 35px;
+  margin: 35px auto;
 }
 
 .header {
